@@ -23,4 +23,4 @@ jobs:
         run: pip install cfn-lint
 
       - name: Lint CloudFormation template
-        run: cfn-lint templatee.yaml
+        run: cfn-lint template.yaml
