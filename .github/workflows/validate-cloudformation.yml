@@ -1,0 +1,24 @@
+
+name: Validate CloudFormation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    name: Check template
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up AWS CLI
+        uses: unfor19/install-aws-cli-action@v1
+
+      - name: Validate CloudFormation template
+        run: |
+          aws cloudformation validate-template \
+            --template-body file://template.yaml \
+            --region us-east-1
