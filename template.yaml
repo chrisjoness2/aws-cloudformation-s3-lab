@@ -58,6 +58,7 @@ Resources:
 
   MyInternetRoute:
     Type: AWS::EC2::Route
+    DependsOn: MyVPCGatewayAttachment
     Properties:
       RouteTableId: !Ref MyRouteTable
       DestinationCidrBlock: 0.0.0.0/0
