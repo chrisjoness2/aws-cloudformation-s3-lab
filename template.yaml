@@ -1,6 +1,6 @@
 # Automated CloudFormation validation and deployment
 
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: "INVALID"
 
 Parameters:
   EnvironmentName:
